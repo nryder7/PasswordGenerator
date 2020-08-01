@@ -14,60 +14,63 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
-
-
-/*IVEN I need a new, secure password
+/*GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 */
 
+var lC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uC = [];
+//push lC to uC with uppercase and consolelog
+for (var i = 0; i < lC.length; i++) {
+  uC.push(lC[i].charAt(0).toUpperCase());
+}
+console.log(uC);
+  uC = uC
+//
+var nC = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var sC = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
-my var = characterCount;
-my var = lowerCase;
-my var = upperCase;
-my var = numericChar;
-my var = specialChar;
-
-my var = lC;
-my var = uC;
-my var = nC;
-my var = sC;
 
 /*THEN I am presented with a series of prompts for password criteria
 WHEN prompted for password criteria
 THEN I select which criteria to include in the password
-*/
-
-/*
 WHEN prompted for the length of the password
 THEN I choose a length of at least 8 characters and no more than 128 characters
 */
-characterCount = prompt("How long would you like your password to be? (8 character minimum, 128 character maximum)");
+var characterCount = prompt("How long would you like your password to be? (8 character minimum, 128 character maximum)");
 
 //WHEN prompted for character types to include in the password
 //THEN I choose lowercase
-lowerCase = prompt("Would you like to include lowercase letters?");
+var lowerCase = confirm("Would you like to include lowercase letters?");
 
 //uppercase
-upperCase = prompt("Would you like to include uppercase letters?");
+var upperCase = confirm("Would you like to include uppercase letters?");
 
 //numeric
-numericChar = prompt("Would you like to include numbers?");
+var numericChar = confirm("Would you like to include numbers?");
 
 //special characters
-specialChar = prompt("Would you like to include special characters?");
+var specialChar = confirm("Would you like to include special characters?");
 
 /*WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
 */
 
-if (lowerCase)
+console.log(lowerCase, upperCase, numericChar, specialChar);
 
-if (upperCase)
 
-if (numericChar)
+if (lowerCase) {
 
-if (specialChar)
+}
+if (upperCase) {
+
+}
+if (numericChar) {
+
+}
+if (specialChar) {
+
+}
 
 //THEN a password is generated that matches the selected criteria
 
