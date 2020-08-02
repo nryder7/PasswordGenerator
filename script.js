@@ -1,8 +1,11 @@
-// Assignment Code
+function generatePassword() {
+  return passwordString
+}
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -24,6 +27,7 @@ var numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var spec = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 var characters = [];
 var passwordCollect = [];
+var passwordString = " "
 
 var characterCount = parseInt(prompt("How long would you like your password to be? (8 character minimum & 128 character maximum)"));
 
@@ -59,7 +63,7 @@ for (var j = 0; j < characterCount; j++) {
   var randomCharacters = Math.floor(Math.random() *characters[randomCharacter].length);
   var passCollection = characters[randomCharacter][randomCharacters];
   passwordCollect.push(passCollection);
-
+  passwordString = passwordCollect
 }
 
 //THEN a password is generated that matches the selected criteria
