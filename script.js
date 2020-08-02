@@ -37,20 +37,22 @@ THEN I select which criteria to include in the password
 WHEN prompted for the length of the password
 THEN I choose a length of at least 8 characters and no more than 128 characters
 */
-var characterCount = prompt("How long would you like your password to be? (8 character minimum, 128 character maximum)");
 
-//WHEN prompted for character types to include in the password
-//THEN I choose lowercase
+var characterCount = prompt("How long would you like your password to be? (8 character minimum & 128 character maximum)");
+
+if (characterCount > 7 && characterCount < 129) {
 var lowerCase = confirm("Would you like to include lowercase letters?");
-
 //uppercase
-var upperCase = confirm("Would you like to include uppercase letters?");
-
+var upperCase = confirm("Would you like to include Uppercase letters?");
 //numeric
 var numericChar = confirm("Would you like to include numbers?");
-
 //special characters
 var specialChar = confirm("Would you like to include special characters?");
+}
+else {
+  alert("Please try again. 8 character minimum and has 128 character maximum.");
+  location.reload();
+}
 
 /*WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
